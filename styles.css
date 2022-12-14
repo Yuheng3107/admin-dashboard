@@ -15,7 +15,7 @@
      display: grid;
      height: 100vh;
      width: 100vw;
-     grid-template-columns: 1fr 4fr;
+     grid-template-columns: 1fr 5fr;
      grid-template-rows: 1fr 3fr;
  }
 
@@ -32,9 +32,23 @@
      color: white;
      display: grid;
      grid-template-columns: 1fr 4fr;
+     grid-template-rows: 100px repeat(10, 50px);
+     font-size: 12px;
+     align-items: center;
+     column-gap: 5px;
      
  }
 
+
+
+ .sidebar img {
+     width: 1.5rem;
+     justify-self: center;
+ }
+
+ .sidebar img:first-of-type {
+     width: 2.5rem;
+ }
  .main-content {
      grid-column: 2 / -1;
      grid-row: 2 / -1;

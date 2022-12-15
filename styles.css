@@ -178,6 +178,10 @@
     gap: 15px;
 }
 
+.projects .card:hover {
+    border: 1px inset #1494d7;
+}
+
 .icons {
     display: flex;
     justify-content: flex-end;

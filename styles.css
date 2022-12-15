@@ -59,7 +59,6 @@
      grid-template-columns: 0.75fr 4fr repeat(3, 1fr);
      padding: 20px 30px 10px 0;
      
-     gap: 1.5rem;
      height: auto;
      
      
@@ -122,6 +121,7 @@
     height: var(--bottom-avatar-radius);
     object-fit: cover;
     justify-self: end;
+    margin-right: 20px;
 }
 
 .header-btn {

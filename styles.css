@@ -8,7 +8,8 @@
 
  :root {
     font-family: 'Open Sans', sans-serif;
-    --avatar-radius: 50px;
+    --avatar-radius: 45px;
+    --bottom-avatar-radius: 60px;
  }
 
  .container {
@@ -16,10 +17,10 @@
      height: 100vh;
      width: 100vw;
      grid-template-columns: 1fr 5fr;
-     grid-template-rows: 1fr 3fr;
+     grid-template-rows: 1fr 4fr;
  }
 
- .grid-container {
+ .top-container {
      display: grid;
      column-gap: 5px;
      height: 30%;
@@ -27,19 +28,16 @@
      align-items: center;
      justify-items: center;
      margin: 10px 30px;
-     
-    
-
  }
 
- .grid-container img:not(.avatar) {
+ .top-container img:not(.avatar) {
      width: 2rem;
      height: auto;
      padding: 5px;
      
      
  }
- .grid-container input {
+ .top-container input {
      flex: 1;
      border-radius: 1000px;
      background-color: #f3f4f6;
@@ -51,6 +49,17 @@
     
  }
 
+ .bottom-container {
+     display: grid;
+     grid-template-columns: 0.75fr 4fr repeat(3, 1fr);
+     padding: 20px 30px 10px 0;
+     
+     gap: 1.5rem;
+     height: auto;
+     box-shadow: 0 4px 10px #d1d5db;
+     
+     
+ }
  .header {
      grid-column: 2 / 3;
      grid-row: 1 / span 1;
@@ -87,9 +96,37 @@
      background-color: #f3f4f6;
  }
 
- .avatar {
+ .top-container .avatar {
     width: var(--avatar-radius);
     border-radius: var(--avatar-radius);
     height: var(--avatar-radius);
     object-fit: cover;
+}
+
+.bottom-container .avatar {
+    width: var(--bottom-avatar-radius);
+    border-radius: var(--bottom-avatar-radius);
+    height: var(--bottom-avatar-radius);
+    object-fit: cover;
+    justify-self: end;
+}
+
+.header-btn {
+    border-radius: 20px;
+    border: none;
+    color: white;
+    background-color: #1494d7;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 0.5rem 2rem;
+    place-self: center;
+}
+
+.header-btn:hover {
+    background-color: #0284c7;
+}
+
+.welcome {
+    font-size: 14px;
+    font-weight: bold;
 }
